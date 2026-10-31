@@ -349,9 +349,3 @@ Se recomienda activar las copias de seguridad antes de procesar una colección i
 - Python: lenguaje de programación principal.
 - Pillow: procesamiento, conversión y compresión de imágenes.
 - Mutagen: lectura y modificación de etiquetas ID3 en archivos MP3.
-
-📄 Licencia
-
-Este proyecto puede utilizarse y modificarse para uso personal.
-
-Si se desea distribuir públicamente, se recomienda incorporar un archivo "LICENSE" con las condiciones de uso correspondientes.
