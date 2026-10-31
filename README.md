@@ -34,17 +34,17 @@ Para utilizar el script necesitas:
 Instalación de dependencias
 
 Abre una terminal y ejecuta:
-
+```
 pip install pillow mutagen
-
+```
 También puedes utilizar:
-
+```
 python -m pip install pillow mutagen
-
+```
 📁 Estructura de carpetas
 
 La estructura recomendada es la siguiente:
-
+```
 Optimizador-MP3/
 │
 ├── optimizar_portadas_mp3.py
@@ -55,7 +55,7 @@ Optimizador-MP3/
     ├── cancion2.mp3
     ├── cancion3.mp3
     └── cancion4.mp3
-
+```
 Por defecto, el programa busca los archivos MP3 dentro de la carpeta "mp3", situada junto al script.
 
 Si esta carpeta no existe, se crea automáticamente.
@@ -66,6 +66,7 @@ También puedes indicar cualquier otra carpeta modificando la configuración.
 
 Todas las opciones principales se encuentran al principio del archivo "optimizar_portadas_mp3.py".
 
+```
 CARPETA_MP3 = Path(__file__).resolve().parent / "mp3"
 
 ANCHO_MAXIMO = 800
@@ -77,43 +78,43 @@ INCLUIR_SUBCARPETAS = False
 CREAR_COPIA_SEGURIDAD = False
 
 FONDO_TRANSPARENCIA = (255, 255, 255)
-
+```
 📂 Carpeta de los archivos MP3
 
 Puedes utilizar cualquier carpeta de tu ordenador.
 
 Windows:
-
+```
 CARPETA_MP3 = Path(r"C:\Users\Usuario\Music")
-
+```
 Linux:
-
+```
 CARPETA_MP3 = Path("/home/usuario/musica")
 
 Carpeta junto al script (predeterminado):
 
 CARPETA_MP3 = Path(__file__).resolve().parent / "mp3"
-
+```
 🖼️ Resolución máxima
 
 Establece las dimensiones máximas permitidas para las imágenes.
-
+```
 ANCHO_MAXIMO = 800
 ALTO_MAXIMO = 800
-
+```
 Por defecto, ninguna portada procesada superará los 800 × 800 píxeles.
 
 El programa mantiene las proporciones originales.
 
 Ejemplos:
-
+```
 Resolución original| Resolución final
 2000 × 2000| 800 × 800
 1200 × 900| 800 × 600
 500 × 500| 500 × 500
 600 × 400| 600 × 400
 300 × 300| 300 × 300
-
+```
 Las imágenes pequeñas no se amplían.
 
 Si una imagen supera el límite de peso incluso después de comprimirla, el programa puede reducir adicionalmente su resolución.
@@ -121,23 +122,23 @@ Si una imagen supera el límite de peso incluso después de comprimirla, el prog
 💾 Peso máximo
 
 Permite establecer el tamaño máximo de las imágenes incrustadas.
-
+```
 PESO_MAXIMO_KB = 149
-
+```
 El valor predeterminado es 149 KB por imagen.
 
 Puedes modificarlo fácilmente:
-
+```
 PESO_MAXIMO_KB = 200
-
+```
 El programa ajustará automáticamente la calidad JPEG para intentar mantener la mayor calidad posible sin superar el límite.
 
 🎨 Calidad JPEG
 
 Permite establecer la calidad máxima utilizada durante la conversión.
-
+```
 CALIDAD_JPEG_MAXIMA = 95
-
+```
 El programa intentará utilizar la mayor calidad posible dentro del límite establecido.
 
 Si la imagen supera el peso máximo, reducirá progresivamente la calidad hasta encontrar un resultado válido.
@@ -147,32 +148,32 @@ Si no consigue cumplir el límite reduciendo solamente la calidad, disminuirá l
 📂 Procesar subcarpetas
 
 Por defecto, el programa analiza únicamente los archivos MP3 de la carpeta principal.
-
+```
 INCLUIR_SUBCARPETAS = False
-
+```
 Para procesar también los archivos de las subcarpetas:
-
+```
 INCLUIR_SUBCARPETAS = True
-
+```
 🔒 Copias de seguridad
 
 El programa puede crear una copia de seguridad de cada MP3 antes de modificarlo.
 
 Por defecto, esta función está desactivada:
-
+```
 CREAR_COPIA_SEGURIDAD = False
-
+```
 Para activarla:
-
+```
 CREAR_COPIA_SEGURIDAD = True
-
+```
 Las copias se guardan con la extensión ".mp3.bak".
 
 Ejemplo:
-
+```
 cancion.mp3
 cancion.mp3.bak
-
+```
 Si la copia de seguridad ya existe, no se sobrescribe.
 
 🖼️ Fondo de imágenes transparentes
@@ -180,9 +181,9 @@ Si la copia de seguridad ya existe, no se sobrescribe.
 El formato JPEG no admite transparencias.
 
 Por este motivo, las imágenes PNG transparentes se convierten utilizando un fondo blanco.
-
+```
 FONDO_TRANSPARENCIA = (255, 255, 255)
-
+```
 Puedes cambiar el color modificando sus valores RGB.
 
 🚀 Ejecución
@@ -190,13 +191,13 @@ Puedes cambiar el color modificando sus valores RGB.
 Una vez instaladas las dependencias y configurada la carpeta, ejecuta el programa.
 
 Windows:
-
+```
 python optimizar_portadas_mp3.py
-
+```
 Linux:
-
+```
 python3 optimizar_portadas_mp3.py
-
+```
 El programa comenzará automáticamente a procesar todos los archivos MP3 encontrados.
 
 No es necesario introducir comandos adicionales ni confirmar cada archivo.
