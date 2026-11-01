@@ -1,4 +1,4 @@
-# Scrip-portadas-mp3
+# Script-portadas-mp3
 
 🎵 Optimizador de portadas MP3
 
